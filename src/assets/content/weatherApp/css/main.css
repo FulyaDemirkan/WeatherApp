@@ -1,0 +1,21 @@
+.weather {
+	width: 100%;
+}
+.weather tbody tr:last-child {
+    border-bottom: 1px solid #d6d6d6;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.weather tbody td {
+    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid rgba(0,0,0,.05);
+}
+
+.weather tbody tr:last-child td {
+    border-bottom: 0;
+}
+.weather tbody tr:nth-child(odd) td,
+.weather tbody tr:nth-child(odd) th {
+    background-color: #eeeeee;
+    background-color: rgba(0,0,0,.04);
+}

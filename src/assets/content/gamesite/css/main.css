@@ -1,0 +1,106 @@
+/*
+Author: 	Ellen Bajcar et al
+Program: 	main.css
+Date: 		Summer 2017
+Update: 		 
+Version: 	a7.s2017.27.07
+Purpose: 	template for Assignment 7 SYST10199 Web Development
+Source: 	various
+Copyright: 
+    This work is the intellectual property of Sheridan College. 
+    Any further copying and distribution outside of class must be within 
+    the copyright law. Posting to commercial sites for profit is prohibited.
+Dependencies:
+	bg3.jpg canvasLogo.js games.css loginForm.html template.html anyGame.html
+Description:
+    see instructions.html
+*/
+
+body,h1,h2,h3,h4,h5,h6 {
+	font-family: "Raleway", sans-serif;
+	max-width:1800px;
+}
+
+body {
+	text-align: justify;
+}
+
+h6 {font-weight: bold; margin-top: 16px;}
+
+img {
+	width: 100%;
+}
+
+#overlay {
+	cursor: pointer;
+}
+
+main {
+	margin-left: 300px;
+}
+
+#mySidebar {
+	z-index: 3;
+	width:300px;
+	background-color: black;
+	color: orange;
+}
+
+.my-news { 
+	text-align: justify; 
+}
+
+.my-news p { 
+	font-size: 0.95em; 
+}
+
+footer img {
+	width: 40%;
+}
+
+.last-star {
+	margin-right: 15px;
+}
+
+.last {
+	margin-left: 6px;
+}
+
+a {
+	text-decoration: none;
+}
+
+sub {
+	font-size: 0.4em;
+}
+
+.meme {
+	position: relative; /* parent: relative to normal flow */
+}
+.meme img {
+	position: absolute; /* child */
+}
+.meme h1, .meme h2 {
+	position: relative;
+	z-index: 100;
+	text-align: center;
+	font-weight: bold;
+	margin: 0 auto;
+}
+.meme h1 {
+	color: orange;
+	font-family: "Raleway", sans-serif;
+	font-size: 20px;
+	padding-top: 10px;
+	text-transform: uppercase;
+    -ms-transform: rotate(-10deg); /* IE 9 */
+    -webkit-transform: rotate(-10deg); /* Safari */
+    transform: rotate(-10deg);	
+}
+.meme h2 {
+	color: #0090FF;
+	font-family: "Raleway", sans-serif;
+	font-size: 20px;
+	padding-top: 38px;
+}
+

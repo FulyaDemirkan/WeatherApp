@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!-- 
+Student name: Fulya Demirkan
+Student number: 991460409
+
+-->
+<html lang="en">
+	<head>
+		<title>Final Project</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107704262-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+
+			gtag('config', 'UA-107704262-1');
+		</script>
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<!-- jQuery UI -->
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		<!-- jQuery Mobile -->
+		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<!-- chart.js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+		<script src="js/main.js"></script>
+		<!-- Place Autocomplete -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBijwo3m35-7JrwUACNxQmpG02f-OhD22g&libraries=places&callback=initMap" async defer></script>
+		<!-- Moment.js -->
+		<script src="https://momentjs.com/downloads/moment.min.js"></script>
+		<link rel="stylesheet" href="css/main.css"> 
+	</head>
+	<body>
+		<div id="mainPage" data-role="page" data-theme="a">
+			<div data-role="panel" id="left-panel-main" data-position="left" data-display="overlay" >
+				<ul data-role="listview" data-theme="d">
+					<li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+					<li data-role="list-divider">Menu</li>
+					<li data-icon="location"><a href="#mainPage" data-transition='slide'>Check Weather</a></li>
+					<li data-icon="bullets"><a href="#comparePage" data-transition='slide'>Compare Cities</a></li>
+				</ul>
+			</div>
+			
+			<div data-role="header" data-position="fixed">
+				<h2>Weather App</h2>
+				<a href="#left-panel-main" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false">Menu</a>
+			</div>
+			
+			<div id="checkWeather" data-role="main">
+				</br>
+				<input type="text" id="city" placeholder="City Name"/>
+				<button id="citySubmit" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-right">Check Weather</button>
+				<div id="errormessage"></div>
+				<div class="divChart">
+					<div class="chart" >
+						<canvas id="chartCity"></canvas>
+					</div>
+				</div>
+				<div id="cityDetails">
+				</div>
+			</div>
+		</div>
+		
+		
+		<div id="comparePage" data-role="page" data-theme="a">
+			<div data-role="panel" id="left-panel-compare" data-position="left" data-display="overlay" >
+				<ul data-role="listview" data-theme="d">
+					<li data-icon="delete"><a href="#" data-rel="close">Close</a></li>
+					<li data-role="list-divider">Menu</li>
+					<li data-icon="location"><a href="#mainPage" data-transition='slide'>Check Weather</a></li>
+					<li data-icon="bullets"><a href="#comparePage" data-transition='slide'>Compare Cities</a></li>
+				</ul>
+			</div>
+			
+			<div data-role="header" data-position="fixed">
+				<h2>Compare Weather</h2>
+				<a href="#left-panel-compare" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false">Menu</a>
+			</div>
+			
+			<div data-role="main">
+				</br>
+				<input type="text" id="city1" placeholder="City 1"/>
+				<input type="text" id="city2" placeholder="City 2"/>
+				<input type="text" id="city3" placeholder="City 3"/>
+				<button id="compareSubmit" class="ui-btn ui-shadow ui-corner-all ui-icon-search ui-btn-icon-right">Compare Weather</button>
+				<div class="divChart">
+					<canvas class="chart" id="chartCompare"></canvas>
+				</div>
+				<div id="compareDetails">
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>

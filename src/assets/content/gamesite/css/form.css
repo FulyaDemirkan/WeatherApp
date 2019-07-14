@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Teko:400,600);
+
+body { 
+	background-color: #111; 
+	color: #eee; 
+	max-width:600px; 
+	margin: auto;
+}
+
+main, fieldset, form, label { 
+	color: black; 
+}
+
+.log {
+	max-width:600px; 
+}
+
+form {
+	background-color: white;
+}
+
+textarea {
+	display: block;
+	width: 100%;
+	height: 150px; 
+}
+.btnForm {
+	display: block;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.disabled {
+	color: #666;
+}
+#confirmMessage, #strength {
+	margin-left: 15px;
+}	
+.strength0, .strength1, .strength2, .strength3, .strength4 {
+                width:200px;
+                text-align: center;
+                font-weight: bold;
+				padding: 1px 5px;
+}   
+.strength0 { color:#B20E37; }
+.strength1 { color:#D32847; }
+.strength2 { color:#ff5f5f; }
+.strength3 { color:#83D680; }
+.strength4 { color:#4dcd00; }

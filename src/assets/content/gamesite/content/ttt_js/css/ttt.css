@@ -1,0 +1,96 @@
+	/* CSS rules unique to tictacToe.html page */
+table {
+	margin: 25px auto;
+	padding: 18px;
+	color: black;
+	border-collapse: collapse;
+}
+
+td {
+	height: 70px;
+	width: 70px;
+	font-size: 2em;
+	border: 2px solid black;
+}
+
+td:hover{
+	background-color: #a4a4a4;
+}
+
+	/* removing outer borders */
+td:nth-child(1) {
+	border-left-style: none;
+}
+
+td:nth-child(3) {
+	border-right-style: none;
+}
+
+tr:nth-child(1)>td {
+	border-top-style: none;
+}
+
+tr:nth-child(3)>td {
+	border-bottom-style: none;
+}
+
+/* Game mode and winner/turn messages & */
+p {
+	font-size: 1em;
+	padding: 0;
+	margin: 10px 0 0;
+}
+
+div button {
+	border: none;
+	margin: auto;
+	position: absolute;
+	width: 50%;
+	bottom: 0;
+    background:  orange; 
+	color: #fff;	
+	cursor: pointer;
+	padding: 0.3125em;
+}
+
+#btn1 {
+	float: left;
+}
+
+/* for small devices when orientation is portrait */
+@media screen and (max-width: 420px) and (orientation: portrait) {
+	
+	#help p {
+		font-size: 0.7em;
+	}
+	
+	h5 {
+		margin: 0;
+	}
+	
+	div button{
+		font-size: 0.7em;
+	}
+}
+
+/* for small devices when orientation is landscape */
+@media screen and (max-width: 740px) and (orientation: landscape) {
+	#help p {
+		font-size: 0.7em;
+		padding: 0;
+		margin: 2px;
+	}
+	
+	h5 {
+		margin: 0;
+	}
+	
+	td {
+		width: 40px;
+		height: 40px;
+		font-size: 1.5em;
+	}
+}
+
+
+

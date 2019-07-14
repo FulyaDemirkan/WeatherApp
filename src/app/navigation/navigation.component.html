@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	<a class="navbar-brand tag" routerLink="/home"><img src="/assets/images/Psi.png" width="30" height="30" class="d-inline-block align-top rounded">Fulya Demirkan</a>
+
+  <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed"
+      [attr.aria-expanded]="!isCollapsed"
+      data-toggle="collapse" 
+			data-target="#navbarCollapse" 
+			aria-controls="navbarCollapse"
+			aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	
+	<div class="collapse navbar-collapse" id="navbarCollapse" [ngbCollapse]="isCollapsed">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item">
+				<a class="nav-link tag" routerLink="/home" (click)="isCollapsed = !isCollapsed">Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link tag" routerLink="/about" (click)="isCollapsed = !isCollapsed">About Me</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link tag" routerLink="/projects" (click)="isCollapsed = !isCollapsed">My Projects</a>
+			</li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li class="nav-item">
+				<a class="nav-link tag" href="https://github.com/FulyaDemirkan" target="_blank"><i class="fa fa-github"></i> GitHub</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link tag" href="https://www.linkedin.com/in/fulyak/" target="_blank"><i class="fa fa-linkedin-square"></i> Linkedin</a>
+			</li>
+		</ul>
+	</div>
+</nav>

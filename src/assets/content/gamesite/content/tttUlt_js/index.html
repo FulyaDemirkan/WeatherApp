@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ultimate Tic Tac Toe</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--
+		Author: F. Fulya Demirkan
+		Date created: 03/June/2017
+		Date updated: 16/August/2017
+		Version: 1.1
+		Description: The game consists of nine tictactoe boards, using the standard rules. In this variation, each player's turn consists of choosing any one of the 81 available cells. Players aim to win invidual boards so that they are a winner of any row, any column or either diagonal boards.
+					
+		For main page layout and responsiveness I used the template Ellen Bajcar shared with us.
+		
+		First section gives validation error because there is no header;
+		**Warning: Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections.
+	-->
+	<link href="https://fonts.googleapis.com/css?family=Baloo%7cChewy%7cFredoka+One%7cKaushan+Script%7cModak%7cPacifico%7cRock+Salt%7cRusso+One" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/7B37347D-8510-7E40-9572-91875F13D1F9/main.js" charset="UTF-8"></script>
+	<link rel="stylesheet" crossorigin="anonymous" href="http://gc.kis.v2.scr.kaspersky-labs.com/B6C874E9-D3FA-824B-BF65-3794B393B5FC/abn/main.css"/>
+	<link href="../../css/games.css" rel="stylesheet" type="text/css">
+	<link href="css/tttUlt.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<header>
+		<h3>Ultimate Tic Tac Toe</h3>
+	</header>
+	<main>
+		<section id="mainTag" class="result"></section>	
+		<div id="btn1"><button id="pvspMode" title="Click to start a new game.">PLAYER VS. PLAYER</button></div>	
+		<div id="btn2"><button id="pvscMode" title="Click to start a new game.">PLAYER VS. COMPUTER</button></div>	
+	</main>
+	<nav>
+		<button class="navBtn">stats</button>
+		<button class="navBtn">help</button>
+		<button class="navBtn">close</button>
+	</nav>	
+	<footer>
+		<address>Fulya Demirkan, SYST10199 Web Programming &copy; Sheridan College</address>
+		<small>ver.0.0.0</small>
+	</footer>
+	<section id="messg" class="stats">
+		<h5>stats display here</h5>
+		<p></p>
+	</section>
+	<section id="help" class="help">
+		<h5>HOW TO PLAY?</h5>
+		<p>Each player can place a token to any of the nine boards. First player who places their token to any row, any column or either diagonal cells wins the board. For winning the ultimate game you need to be a winner of any row, any column or either diagonal boards.<br><br>
+		<em>(Tap again to hide rules)</em>
+		</p>
+	</section>	
+	<script src="js/tttUlt.js"></script>	
+</body>
+</html>

@@ -1,0 +1,30 @@
+<br><br>
+<div class="album text-muted">
+	<div class="container">
+		<h3>Web Projects</h3>
+		<div class="row">
+			<ng-container *ngFor="let project of projects">
+				<a *ngIf="project.type == 'webProject'" routerLink="/project/{{project.id}}">
+					<div class="card index border border-dark">
+					<h6>{{ project.name }}</h6>
+					<img src="{{ project.screenshots[0].url}}" alt="{{ project.name }}">
+					<p class="card-text">{{ project.shortDescription}}</p>
+					</div>
+				</a>
+			</ng-container>
+		</div>
+		<h3>Desktop Projects</h3>
+		<div class="row">
+			<ng-container *ngFor="let project of projects">
+        <a *ngIf="project.type == 'desktopProject'" routerLink="/project/{{project.id}}">
+          <div class="card index border border-dark">
+          <h6>{{ project.name }}</h6>
+          <img src="{{ project.screenshots[0].url}}" alt="{{ project.name }}">
+          <p class="card-text">{{ project.shortDescription}}</p>
+          </div>
+				</a>
+			</ng-container>
+		</div>
+		<br>
+	</div>
+</div>

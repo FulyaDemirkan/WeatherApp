@@ -1,0 +1,131 @@
+/* CSS rules unique to Rock Paper Scissors Lizard Spock Game*/
+table {
+	margin: auto;
+	border-collapse: collapse;
+}
+
+td {
+	width: 250px;
+}
+
+/* messages at the top row must only have colored background and no bottom borders. */
+tr:nth-child(2) td {
+	height: 150px;
+}
+
+/* messages at the top row must only have colored background and no bottom borders.*/
+tr:nth-child(4) td {
+	height: 100px;
+}
+
+/* messages at the top row must only have colored background and no bottom borders.*/
+tr:last-child td {
+	height: 75px;
+}
+
+/* images that user will choose from will be highlighted when user hovers on them.*/
+.token:hover {
+	background: orange;
+}
+
+/* images that will be shown in the game pane will not be highlighted.*/
+#playerBox:hover, #computerBox:hover {
+	background: none;
+}
+
+img {
+	width: 70px;
+}
+/* images that user will choose from will be highlighted when user hovers on them.*/
+img:hover {
+	background: orange;
+}
+
+span {
+	display: block;
+	margin: 0 0 5px;
+	padding: 0;
+	background-color: #a4a4a4;
+	text-transform: capitalize;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+	text-transform: capitalize;
+}
+
+/* for small devices when orientation is portrait */
+@media screen and (max-width: 420px) and (orientation: portrait) {
+	td {
+		width: 100px;
+	}
+	
+	/* all height values reduced as 2/5 of first values.*/
+	tr:nth-child(2) td {
+		height: 100px;
+	}
+
+	tr:nth-child(4) td {
+		height: 60px;
+	}
+	
+	tr:last-child td {
+		height: 20px;
+	}
+	
+	table:first-child tr:first-child td:nth-child(3) span, table:first-child tr:first-child td:nth-child(1) span{
+		height: 25px;
+		font-size: 0.8em;
+	}
+
+	img {
+		width: 2.5em;
+	}
+	
+	h5 {
+		margin: 0;
+	}
+	
+	#help p {
+		font-family: calibri;
+	}
+}
+/* for small mobile devices when orientation is landscape */
+@media screen and (max-width: 740px) and (orientation: landscape) {
+	td {
+		width: 150px;
+	}
+	
+	/* all height values reduced as ~1/5 of first values.*/
+	tr:nth-child(2) td {
+	height: 50px;
+}
+
+	tr:nth-child(4) td {
+		height: 40px;
+	}
+	
+	tr:last-child td {
+		height: 10px;
+	}
+	
+	img {
+		width: 2.5em;
+	}
+	
+	#help p {
+		font-size: 0.7em;
+		font-family: calibri;
+		padding: 0;
+		margin: 0;
+	}
+	
+	h5 {
+		margin: 0;
+	}
+		
+	#help {
+		height: 60%;
+	}
+}				

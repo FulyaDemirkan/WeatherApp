@@ -1,0 +1,30 @@
+<div class="jumbotron" *ngIf="project">
+    <div class="header clearfix">
+      <h3>{{project.name}}</h3>
+      
+    <br>
+      <h4>Description</h4>
+      <span [innerHTML]="project.fullDescription"></span>
+      
+      <br>  
+      <h4>Technologies Used</h4>
+      <p>{{project.technologies}}</p>
+
+      <ng-container *ngIf="project.links.length > 0">
+          <br>   
+          <h4>Links</h4>
+        <ng-container *ngFor="let link of project.links">
+            <a href="{{link.url}}">{{link.name}}</a>
+            <br>
+          </ng-container>
+      </ng-container>
+      
+      <br>
+      <h4>Screenshots</h4>
+        <figure *ngFor="let screenshot of project.screenshots; index as i">
+          <img src={{screenshot.url}} alt="screenshot.alt" class="hover-shadow">
+          <figcaption>ScreenShot {{i+1}} - {{ screenshot.alt }}</figcaption>
+        </figure>
+    </div>
+  </div>
+  <a routerLink="/projects">Back to My Projects</a>

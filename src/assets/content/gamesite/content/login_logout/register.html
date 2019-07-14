@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--
+		Author: F. Fulya Demirkan
+		Date created: 16/August/2017
+		Date updated: -
+		Version: 0.1
+		Description: This is a registration page for a members only web site.
+			
+		I used the codes Ellen Bajcar shared with us as a base.
+	-->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" type="text/css">
+	<link rel="stylesheet" href="../../css/form.css" type="text/css">	
+</head>
+<body>
+	<h2>Create Account</h2>
+	<!-- First Grid -->
+	<main class="w3-modal-content w3-card-4 w3-animate-zoom log" id="intro">
+		<a  href="../../index.php" class="w3-button w3-large w3-hover-red w3-display-topright" title="Close">&times;</a>	
+		<form id="myForm" class="w3-container w3-padding-32" action="registerProcess.php" method="POST">
+			<fieldset>
+				<legend>Personal Information</legend>
+				<p>
+				<input class="w3-input" type="text" name="first" required>
+				<label class="w3-label w3-validate">First Name</label></p>
+				<p>
+				<input class="w3-input" type="text" name="last" required>
+				<label class="w3-label w3-validate">Last Name</label></p>	
+				<fieldset>
+					<legend>Gender</legend>
+					<input class="w3-radio" type="radio" name="gender" value="male" checked>
+					<label class="w3-validate">Male</label>
+					<input class="w3-radio" type="radio" name="gender" value="female">
+					<label class="w3-validate">Female</label>
+				</fieldset>			
+				<p>
+				<input class="w3-input" type="email" name="email" required>
+				<label class="w3-label w3-validate">Email</label></p>
+				<p>
+				<input id="phone" class="w3-input" type="tel" name="phone" required>
+				<label class="w3-label w3-validate">Phone</label></p>		
+				<select class="w3-select" name="prov" id="prov">
+					<option disabled selected>Select Province</option>
+				</select>			
+			</fieldset>	
+			<fieldset>
+				<legend>Choose a username</legend>
+				<p class="fieldWrapper">
+					<input class="w3-input" type="text" name="username" id="user" required >
+					<label class="w3-label w3-validate">Username</label></p>	
+				</p>
+			</fieldset>
+			<fieldset>
+				<legend>Choose a password</legend>
+				<p class="fieldWrapper">
+					<input class="w3-input" type="password" name="pass1" 
+							id="pass1" required 
+							onkeyup="chkPasswordStrength(this.value,document.getElementById('strength'),document.getElementById('error'))">
+					<label for="pass1" class="w3-label w3-validate">Password</label> <span id="strength" class="strength5"><strong>Password Strength</strong></span> &nbsp;&nbsp; <span id="error"></span>
+				</p>
+				<p class="fieldWrapper">					
+					<input class="w3-input" type="password" name="pass2" id="pass2" onkeyup="checkPass(); return false;" required>
+					<label for="pass2" class="w3-label w3-validate">Confirm Password</label> <span id="confirmMessage" class="confirmMessage"></span>
+				</p>		
+				<input type="hidden" name="curdate" value="2017-07-24">
+			</fieldset>		
+			<br>
+			<input type="submit" class="w3-btn w3-orange w3-large btnForm">
+			<input type="button" id="butReset" value="Reset form" class="w3-btn w3-orange w3-large btnForm">
+		</form>
+	</main>	
+	<!-- Footer -->
+	<footer class="w3-container w3-center w3-opacity">  
+		<p class="w3-center w3-text-orange">Fulya Demirkan, SYST10199 Web Programming &copy; Sheridan College</p>
+	</footer>
+<script src="js/register.js"></script>	
+</body>
+</html>
